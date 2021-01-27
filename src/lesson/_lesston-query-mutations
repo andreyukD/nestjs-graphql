@@ -1,0 +1,43 @@
+  query {
+    lessons {
+      name
+      startDate
+      endDate
+    }
+  }
+
+  mutation {
+    createLesson(
+      createLessonInput: {
+      name:"New2"
+      startDate: "2020-03-28T18:00:00Z"
+      endDate: "2020-03-28T18:30:00Z"
+        students: [
+          "9aab4502-0f71-4ab2-8f9e-c717baad236d",
+          "b8d76eca-48d6-4d15-a602-1b72425cdd9f",
+        ]
+      }
+    ) {
+      name
+      id
+      students{
+        firstName
+        lastName
+      }
+    }
+  }
+
+  mutation {
+    assignStudentsToLesson(assignStudentsToLessonInput: {
+      lessonId: "103b4380-80a5-4750-aad4-67517066d888",
+      studentIds: [
+        "9aab4502-0f71-4ab2-8f9e-c717baad236d",
+        "b8d76eca-48d6-4d15-a602-1b72425cdd9f",
+      ]
+    }) {
+      name
+      students {
+        firstName
+      }
+    }
+  }  

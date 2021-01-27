@@ -1,0 +1,22 @@
+mutation {
+  createStudent(createStudentInput: {
+    firstName: "Dima",
+    lastName: "Andr"
+  }) {
+    id
+    firstName
+    lastName
+  }
+}
+
+query {
+  students {
+    firstName
+  }
+}
+
+query {
+  student(id: "639b6524-5164-43ed-ad5f-3ebe7d557560") {
+    firstName
+  }
+}  

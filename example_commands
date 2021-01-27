@@ -1,0 +1,10 @@
+nest new graphql-mongodb
+delete appcontroller, appsepects appservice
+npm i graphql graphql-tools apollo-server-express @nestjs/graphql
+nest g module lesson
+npm i typeorm @nestjs/typeorm mongodb @types/mongodb
+nest g service lesson --no-spec
+npm i uuid
+npm i class-validator class-transformer
+nest g module student
+nest g service student
